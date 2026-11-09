@@ -118,7 +118,9 @@ body.nav-active {
 .container {
   padding-inline: 16px;
 }
-
+section{
+  margin-top: 30px;
+}
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -175,16 +177,49 @@ body.nav-active {
 }
 
 /*-----------------------------------*\
+  #HOME STYLES
+\*-----------------------------------*/
+
+.home .h1.title{
+  text-align: center;
+  color: var(--text-white);
+  font-weight: var(--weight-bold);
+  font-size: var(--fontSize-1);
+}
+.home .home-content .goal{
+  font-size: var(--fontSize-4);
+  text-align: center;
+  margin-block: 25px;
+}
+
+.home .home-banner img{
+  max-width: 100vw;
+  max-height: 100vh;
+  margin-inline: auto;
+
+}
+
+/*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
-/* small phone */
+/*small phone */
 @media (max-width: 300px) {
   .header .logo img {
     width: 120px;
     height: 30px;
   }
 }
-
+/* normal phones */
+@media (max-width:400px){
+ /* home */
+  .home .h1.title{
+ 
+  font-size: var(--fontSize-4);
+}
+.home .goal{
+  font-size: var(--fontSize-6);
+}
+}
 /* small tablet */
 @media (max-width: 1190px) {
   .header .menu {
@@ -225,4 +260,13 @@ body.nav-active {
     align-items: flex-start;
     gap: 20px;
   }
+  /* home */
+  .home .h1.title{
+ 
+  font-size: var(--fontSize-3);
+}
+.home .goal{
+  font-size: var(--fontSize-6);
+}
+
 }
