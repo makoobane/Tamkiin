@@ -113,13 +113,20 @@ body.nav-active {
 }
 
 /*-----------------------------------*\
-  #REUSED STYLE
+#REUSED STYLE
 \*-----------------------------------*/
 .container {
   padding-inline: 16px;
 }
 section{
   margin-top: 30px;
+}
+.h1.title{
+ text-align: center;
+ color: var(--text-white);
+ font-weight: var(--weight-bold);
+ font-size: var(--fontSize-1);
+margin-block: 50px;
 }
 /*-----------------------------------*\
   #HEADER
@@ -180,16 +187,10 @@ section{
   #HOME STYLES
 \*-----------------------------------*/
 
-.home .h1.title{
-  text-align: center;
-  color: var(--text-white);
-  font-weight: var(--weight-bold);
-  font-size: var(--fontSize-1);
-}
 .home .home-content .goal{
   font-size: var(--fontSize-4);
   text-align: center;
-  margin-block: 25px;
+  margin-block-end: 25px;
 }
 
 .home .home-banner img{
@@ -199,6 +200,44 @@ section{
 
 }
 
+/*-----------------------------------*\
+  #Objectives
+\*-----------------------------------*/
+.objectives .container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.objectives .objective-container{
+  position: relative;
+  background-color: var(--bg-sunglow);
+  width: 20vw;
+  padding: 20px;
+  border-radius: var(--radius-24);
+  
+}
+.objective-container::before{
+  position: absolute;
+  content: "";
+  top: -15px;
+  left: 25%;
+  width: 50%;
+  height: 30px;
+  background-color: var(--border-blue-jeans);
+  border-radius: var(--radius-pill);
+}
+.objective-title{
+  color: var(--text-black);
+  font-size: var(--fontSize-3);
+  text-align: center;
+  font-weight: var(--weight-semiBold);
+}
+.explain-objective{
+  color: var(--text-black);
+  font-size: var(--fontSize-5);
+  font-family: var(--fontFamily-open-sans);
+
+}
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
@@ -219,8 +258,21 @@ section{
 .home .goal{
   font-size: var(--fontSize-6);
 }
+
 }
-/* small tablet */
+/* smalll tablet */
+@media (max-width:800px){
+.objectives .container{
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.objectives .objective-container{
+  width: 60vw;
+}
+}
+/* normal tablet */
 @media (max-width: 1190px) {
   .header .menu {
     display: block;
@@ -268,5 +320,20 @@ section{
 .home .goal{
   font-size: var(--fontSize-6);
 }
+/* objectives */
+.objective-title{
+  color: var(--text-black);
+  font-size: var(--fontSize-4);
+  text-align: center;
+  font-weight: var(--weight-semiBold);
+}
+.explain-objective{
+  color: var(--text-black);
+  font-size: var(--fontSize-6);
+  font-family: var(--fontFamily-open-sans);
 
+}
+.objectives .objective-container{
+  width: 30vw;
+}
 }
