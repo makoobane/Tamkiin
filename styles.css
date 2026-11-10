@@ -250,7 +250,7 @@ margin-block-end: 50px;
 .VMission .container{
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   gap: 30px;
 }
 .VMission-container{
@@ -260,10 +260,7 @@ margin-block-end: 50px;
   max-width: 40vw;
   min-height: 35vh;
 }
-.VMission-logo .icon{
-  text-align: center;
-  font-size: var(--fontSize-4);
-}
+
 .VMission-title{
   color: var(--text-white);
   text-align: center;
@@ -318,10 +315,11 @@ margin-block-end: 50px;
 .VMission .container{
   display: grid;
   place-items: center;
+  justify-content: center;
   gap:30px;
 }
 .VMission-container{
-  max-height: unset;
+  min-height: unset;
   max-width: 85vw;
 
 }
