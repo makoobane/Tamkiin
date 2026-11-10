@@ -126,7 +126,11 @@ section{
  color: var(--text-white);
  font-weight: var(--weight-bold);
  font-size: var(--fontSize-1);
-margin-block: 50px;
+margin-block-end: 50px;
+}
+.h3{
+  font-size: var(--fontSize-3);
+  font-weight: var(--weight-semiBold);
 }
 /*-----------------------------------*\
   #HEADER
@@ -207,15 +211,17 @@ margin-block: 50px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 30px;
 }
 .objectives .objective-container{
   position: relative;
   background-color: var(--bg-sunglow);
-  width: 20vw;
   padding: 20px;
+  max-width: 33vw;
   border-radius: var(--radius-24);
   
 }
+/* blue pill on the top */
 .objective-container::before{
   position: absolute;
   content: "";
@@ -239,6 +245,35 @@ margin-block: 50px;
 
 }
 /*-----------------------------------*\
+  #Vision and Mission
+\*-----------------------------------*/
+.VMission .container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+.VMission-container{
+  background-color: var(--bg-vivid-violet);
+  border-radius: var(--radius-24);
+  padding: 20px;
+  max-width: 40vw;
+  min-height: 35vh;
+}
+.VMission-logo .icon{
+  text-align: center;
+  font-size: var(--fontSize-4);
+}
+.VMission-title{
+  color: var(--text-white);
+  text-align: center;
+}
+.VMission-text{
+  text-align: center;
+  color: var(--text-white);
+  font-size: var(--fontSize-6);
+}
+/*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
 /*small phone */
@@ -258,18 +293,37 @@ margin-block: 50px;
 .home .goal{
   font-size: var(--fontSize-6);
 }
+/* objectives */
+.objectives .h1.title{
+  font-size: var(--fontSize-4);
+}
+/* vmission */
+.VMission .h1.title{
+  font-size: var(--fontSize-4);
 
 }
+}
 /* smalll tablet */
-@media (max-width:800px){
+@media (max-width: 800px){
+  /* objectives */
 .objectives .container{
   display: grid;
   place-items: center;
   justify-content: center;
-  gap: 40px;
 }
 .objectives .objective-container{
-  width: 60vw;
+  max-width: 85vw;
+}
+/* vmission */
+.VMission .container{
+  display: grid;
+  place-items: center;
+  gap:30px;
+}
+.VMission-container{
+  max-height: unset;
+  max-width: 85vw;
+
 }
 }
 /* normal tablet */
@@ -321,19 +375,17 @@ margin-block: 50px;
   font-size: var(--fontSize-6);
 }
 /* objectives */
+.objectives .h1.title{
+  font-size: var(--fontSize-3);
+}
 .objective-title{
-  color: var(--text-black);
-  font-size: var(--fontSize-4);
-  text-align: center;
-  font-weight: var(--weight-semiBold);
+  font-size: var(--fontSize-3);
 }
 .explain-objective{
-  color: var(--text-black);
   font-size: var(--fontSize-6);
-  font-family: var(--fontFamily-open-sans);
-
 }
-.objectives .objective-container{
-  width: 30vw;
+/* Vmission */
+.VMission .h1.title{
+  font-size: var(--fontSize-3);
 }
 }
