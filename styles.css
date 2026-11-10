@@ -128,10 +128,19 @@ section{
  font-size: var(--fontSize-1);
 margin-block-end: 50px;
 }
+.h2.title{
+  font-size:  var(--fontSize-3);
+  text-align: center;
+  color: var(--text-white);
+}
 .h3{
   font-size: var(--fontSize-3);
   font-weight: var(--weight-semiBold);
 }
+.h5.title {
+  font-size: var(--fontSize-5);
+}
+
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -271,6 +280,76 @@ margin-block-end: 50px;
   font-size: var(--fontSize-6);
 }
 /*-----------------------------------*\
+  #Collaboration
+\*-----------------------------------*/
+.collaboration .container{
+  display: grid;
+  place-items: center;
+  gap: 30px;
+  grid-template-columns: repeat(3,1fr);
+}
+.collaboration .collaboration-item{
+  background-color: var(--bg-white-alpha-10);
+  padding: 20px;
+  border-radius: var(--radius-24);
+
+}
+.collaboration-item-title{
+  text-align: center;
+  color: var(--text-sunglow);
+}
+.colaboration-item-text{
+  font-size: var(--fontSize-7);
+  color: var(--text-white);
+  text-align: center;
+}
+/* Response */
+.response .h2{
+  color: var(--text-sunglow);
+}
+.response .container{
+  background-color: var(--bg-vivid-violet);
+  border-radius: var(--radius-24);
+  padding: 20px;
+  margin-block: 30px;
+  margin-inline: auto;
+  max-width: max-content;
+}
+.response li{
+  text-align: center;
+  color: var(--text-white);
+  font-size: var(--fontSize-6);
+}
+/*-----------------------------------*\
+  #Footer
+\*-----------------------------------*/
+footer{
+  background-color: var(--bg-dark-purple);
+  margin-block: 40px;
+  z-index: -1;
+  display: grid;
+  place-items: center;
+  gap:30px;
+  min-height: 40vh;
+}
+footer .contact-us{
+  display: flex;
+  align-items: center;
+  gap: 5vw;
+}
+.contact-us .contact{
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 10px;
+}
+footer .copyright{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+/*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
 /*small phone */
@@ -322,6 +401,17 @@ margin-block-end: 50px;
   min-height: unset;
   max-width: 85vw;
 
+}
+/* collaboration */
+.collaboration .container{
+ display: unset;
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ justify-content: space-between;
+}
+.collaboration-item{
+  min-width: 100%;
 }
 }
 /* normal tablet */
@@ -385,5 +475,14 @@ margin-block-end: 50px;
 /* Vmission */
 .VMission .h1.title{
   font-size: var(--fontSize-3);
+}
+/* collaboration */
+.collaboration .h1.title{
+  font-size: var(--fontSize-3);
+
+}
+.collaboration .container{
+ 
+  grid-template-columns: repeat(2,1fr);
 }
 }
